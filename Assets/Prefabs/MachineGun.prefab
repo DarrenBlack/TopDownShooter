@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   m_Layer: 8
-  m_Name: GunCharacteristics
+  m_Name: MachineGunCharacteristics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: ea444c7f63e9d37409039481133ca54c, type: 2}
   spentBullet: {fileID: 100000, guid: 86ba47becdea5164da95a4cb9e23ca24, type: 2}
+  isAutomatic: 1
   fireRate: .075000003
   bulletSpreadMin: -5
   bulletSpreadMax: 5
@@ -129,7 +130,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 2503044401
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300018, guid: ddff42fa8a1a6494387ff75685292021, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a25d35025fc98349830ec2123539449, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

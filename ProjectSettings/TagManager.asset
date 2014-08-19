@@ -53,6 +53,10 @@ TagManager:
     userID: 1
     uniqueID: 2503044401
     locked: 0
+  - name: Weapon
+    userID: 5
+    uniqueID: 549413359
+    locked: 0
   - name: Foreground
     userID: 3
     uniqueID: 1765011265

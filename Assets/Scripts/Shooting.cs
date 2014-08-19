@@ -40,8 +40,9 @@ public class Shooting : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (!isAutomatic)
+            if (!isAutomatic && Time.time > nextFire)
             {
+                nextFire = Time.time + fireRate;
                 ShootBullet();
             }
         }
