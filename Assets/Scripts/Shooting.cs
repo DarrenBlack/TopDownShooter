@@ -17,6 +17,7 @@ public class Shooting : MonoBehaviour {
 
     public float spentBulletSpreadMin;
     public float spentBulletSpreadMax;
+    public Vector3 spentBulletEjectPositon; //position spent bullet ejects from gun
 
     public float minSpentBulletDrag;
     public float maxSpentBulletDrag;
@@ -60,7 +61,7 @@ public class Shooting : MonoBehaviour {
     void EjectBullet()
     {       
         spentBullet = Instantiate(spentBullet, currentPosition, transform.rotation) as GameObject;
-        spentBullet.transform.Translate(new Vector3(-3f, 0, 0)); //instantiates spent bullet further back          
+        spentBullet.transform.Translate(spentBulletEjectPositon); //instantiates spent bullet further back          
 
         float randDrag = Random.Range(minSpentBulletDrag, maxSpentBulletDrag); //Varies distance spent bullet flies from gun
         float randZ = Random.Range(spentBulletSpreadMin, spentBulletSpreadMax);

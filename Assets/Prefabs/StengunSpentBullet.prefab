@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   - 50: {fileID: 5000000}
   m_Layer: 11
-  m_Name: SpentBullet
+  m_Name: StengunSpentBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 366167651
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06a241f8560ffcf4fad9e9ef7205f790, type: 3}
+  m_Sprite: {fileID: 21300002, guid: bc2ef4615a079f94ebfa98d1e2d30f2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
