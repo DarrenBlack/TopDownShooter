@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Shooting : MonoBehaviour {
 
@@ -24,7 +25,6 @@ public class Shooting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -46,14 +46,14 @@ public class Shooting : MonoBehaviour {
                 nextFire = Time.time + fireRate;
                 ShootBullet();
             }
-        }
+        }        
 	}
 
     void ShootBullet()
     {
         float randZ = Random.Range(bulletSpreadMin, bulletSpreadMax);
-
         bullet = Instantiate(bullet, currentPosition, transform.rotation) as GameObject;
+        bullet.name = "bullet";
         bullet.transform.Rotate(0, 0, randZ);
         EjectBullet();
     }
@@ -61,6 +61,7 @@ public class Shooting : MonoBehaviour {
     void EjectBullet()
     {       
         spentBullet = Instantiate(spentBullet, currentPosition, transform.rotation) as GameObject;
+        spentBullet.name = "spent bullet";
         spentBullet.transform.Translate(spentBulletEjectPositon); //instantiates spent bullet further back          
 
         float randDrag = Random.Range(minSpentBulletDrag, maxSpentBulletDrag); //Varies distance spent bullet flies from gun

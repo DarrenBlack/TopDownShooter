@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc2ef4615a079f94ebfa98d1e2d30f2d
+guid: 6ee80669359f4c4448f3ae491c731d0e
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -42,23 +42,23 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: StenGunBullet
+    - name: StengunBullet
       rect:
         serializedVersion: 2
         x: 2
         y: 147
-        width: 481
-        height: 116
+        width: 484
+        height: 121
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: StenGunBulletSpent
+    - name: StengunBulletSpent
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 337
-        height: 116
+        width: 340
+        height: 121
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
