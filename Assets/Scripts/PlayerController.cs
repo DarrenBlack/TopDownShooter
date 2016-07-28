@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody2D>();
+		FitColliderToChildren(gameObject);
 	}
 	
 	// Update is called once per frame
@@ -72,4 +73,37 @@ public class PlayerController : MonoBehaviour {
 void FixedUpdate(){
 	myRigidBody.velocity = moveVelocity;
 	}
+
+
+	//Resize boxcollider2d to fit all sprites that are children of the gameobject
+	private void FitColliderToChildren (GameObject parentObject)
+	{
+		BoxCollider2D bc = parentObject.GetComponent<BoxCollider2D>();
+		if(bc==null){bc = parentObject.AddComponent<BoxCollider2D>();
+		Bounds bounds = new Bounds (Vector3.zero, Vector3.zero);
+		bool hasBounds = false;
+		Renderer[] renderers =  parentObject.GetComponentsInChildren<Renderer>();
+		foreach (Renderer render in renderers) {
+				//excludes gun
+				GunController script = render.GetComponentInParent<GunController>();
+					if(script == null){
+						if (hasBounds) {
+							bounds.Encapsulate(render.bounds);
+						} else {
+							bounds = render.bounds;
+							hasBounds = true;
+						}
+					}
+
+		}
+			if (hasBounds) {
+				bc.offset = bounds.center - parentObject.transform.position;
+				bc.size = bounds.size;
+			} else {
+				bc.size = bc.offset = Vector3.zero;
+				bc.size = Vector3.zero;
+			}
+		}
+	}
 }
+

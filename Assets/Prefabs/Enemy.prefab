@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21205532}
   - 50: {fileID: 5063030}
   - 114: {fileID: 11455186}
-  - 61: {fileID: 6179640}
   - 114: {fileID: 11438282}
+  - 61: {fileID: 6189028}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -47,7 +47,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6179640
+--- !u!61 &6189028
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
